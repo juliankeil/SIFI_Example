@@ -1,0 +1,2808 @@
+{
+  "components": {
+    "2": {
+      "id": "2",
+      "type": "lab.html.Screen",
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "Continue",
+            "keypress",
+            "",
+            "Space"
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "audio play",
+              "message": "run",
+              "code": "\ndocument.addEventListener('keydown', function(e) {\n  if (e.keyCode == 65) {\n    document.getElementById('audio').play();\n  }\n});"
+            }
+          ]
+        ]
+      },
+      "title": "sound Instructions",
+      "content": "<audio id=\"audio\" controls style=\"display:none\">\n  <source src='http://www.biopsych.uni-kiel.de/experiments/Sounds/10ms1000Hz.mp3'> \n</audio>\n\n<main class=\"content-vertical-center content-horizontal-center\">\n  <div class=\"w-m text-justify\">\n\n<p> Thank you! </p>\n <p> In the following experiment, you'll be presented short beeps. To make sure you can hear all the sounds, please check if your speakers are turned on.</p>\n <p> If they are turned on, please press <strong>A</strong> on your keyboard to play a beep. This way you can check whether the volume is neither too low nor too high and you can hear the beeps clearly. Please adjust the volume if this isn't the case.</p>\n <br>\n </main>\n\n<footer style=\"background-color:grey;\">\n   <p><em>Please press the space bar to continue.</em></p>\n </footer>",
+      "_tab": "Content",
+      "files": {
+        "rows": []
+      }
+    },
+    "7": {
+      "id": "7",
+      "type": "lab.html.Screen",
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "Continue",
+            "keypress",
+            "",
+            "Space"
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "break",
+      "_tab": "Content",
+      "content": "<header>\n  <p><h2>This was the first training block, well done!</h2></p>\n</header>\n\n\n<main class=\"content-vertical-center content-horizontal-center\">\n <p> <h3>You can take a break now if you want to.</h3> </p>\n </main>\n \n \n <footer style=\"background-color:grey;\"> \n  <em>Ready for the main block? Please press the space bar to continue!</em>\n</footer>\n\n \n\n ",
+      "files": {
+        "rows": []
+      }
+    },
+    "8": {
+      "id": "8",
+      "type": "lab.html.Form",
+      "content": "<header>\n  <h3>Well done! You're almost finished...</h3>\n</header>\n\n<main>\n\n<p> ... we only have a few final questions concerning the experiment for you. Please keep in mind that your answers will be stored and processed in encrypted form and to answer truthfully. Thank you!</p>\n  <form id=\"form\">\n    <table class=\"table-plain\">      \n     \n      <tr>\n        <th style=\"text-align: right;\">\n          Could you see the letters as described in the instructions? \n        </th>\n        <td style=\"text-align: left;\">\n          <select name=\"exp_letters\" required>\n            <option value=\"\" selected> ------ </option> \n            <option value=\"yes\"> Yes </option>\n            <option value=\"no\"> No </option>\n          </select>\n        </td>\n      </tr>\n \n      <tr>\n      <th>\n      </th>\n      <td>\n      </td>\n      </tr>\n\n      </tr>\n      <tr>\n        <th style=\"text-align: right;\">\n          Could you see the flashes as described in the instructions?  \n        </th>\n        <td style=\"text-align: left;\">\n          <select name=\"exp_visual\" required>\n            <option value=\"\" selected> ------ </option> \n            <option value=\"yes\"> Yes </option>\n            <option value=\"no\"> No </option>\n          </select>\n        </td>\n      </tr>\n\n      <tr>\n      <th>\n      </th>\n      <td>\n      </td>\n      </tr>\n\n      <tr>\n        <th style=\"text-align: right;\">\n          Could you hear the beeps as described in the instructions? \n        </th>\n        <td style=\"text-align: left;\">\n          <select name=\"exp_auditory\" required>\n            <option value=\"\" selected> ------ </option> \n            <option value=\"yes\"> Yes </option>\n            <option value=\"no\"> No </option>\n          </select>\n        </td>\n      </tr>\n\n      <tr>\n      <th>\n      </th>\n      <td>\n      </td>\n      </tr>\n\n      <tr>\n        <th style=\"text-align: right;\">\n          In some cases, the beep and the flash were played simultaneously. Did you perceive a delay between them? \n        </th>\n        <td style=\"text-align: left;\">\n          <select name=\"exp_delay\" required>\n            <option value=\"\" selected> ------ </option> \n            <option value=\"yes\"> Yes, there was a delay. </option>\n            <option value=\"no\"> No, they were played simultaneously. </option>\n          </select>\n        </td>\n      </tr>\n\n      <tr>\n      <th>\n      </th>\n      <td>\n      </td>\n      </tr>\n\n\n       <tr>\n        <th style=\"text-align: right;\">\n          If you perceived a delay: Did you always perceive the delay or did it occur just rarely? \n        </th>\n        <td style=\"text-align: left;\">\n          <select name=\"exp_delayfrequency\" required>\n            <option value=\"\" selected> ------ </option>            \n            <option value=\"never\"> There was no delay. </option> \n            <option value=\"always\"> The delay occured always. </option>\n            <option value=\"rarely\"> The delay occured rarely. </option>\n          </select>\n        </td>\n      </tr>\n\n      <tr>\n      <th>\n      </th>\n      <td>\n      </td>\n      </tr>\n\n       <tr>\n        <th style=\"text-align: right;\">\n          If you perceived a delay: How strong was the delay? \n        </th>\n        <td style=\"text-align: left;\">\n          <select name=\"exp_delayintensity\" required>  \n            <option value=\"\" selected> ------ </option>\n            <option value=\"zero\"> There was no delay. </option> \n            <option value=\"low\"> The delay was barely perceptible. </option>\n            <option value=\"medium\"> The delay was perceptible, but not that strong. </option>\n            <option value=\"high\"> The delay was strong. </option>\n          </select>\n        </td>\n      </tr>\n\n      <tr>\n      <th>\n      </th>\n      <td>\n      </td>\n      </tr>\n\n      <tr>\n        <th style=\"text-align: right;\">\n          Last question: Which browser do you use right now? \n        </th>\n        <td style=\"text-align: left;\">\n          <select name=\"exp_browser\" required>\n            <option value=\"\" selected> ------ </option> \n            <option value=\"Chrome\"> Google Chrome </option>\n            <option value=\"Firefox\"> Mozilla Firefox </option>\n            <option value=\"Safari\"> Safari </option>\n            <option value=\"Internet Explorer\"> Internet Explorer </option>\n            <option value=\"Opera\"> Opera </option>\n            <option value=\"other\"> another browser </option>\n          </select>\n        </td>\n      </tr>\n    </table>\n  </form>\n</main>\n<footer style=\"background-color: grey;\">\n      <button type=\"submit\" form=\"form\">\n        Continue!\n      </button>\n</footer>\n",
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "last questions",
+      "_tab": "Content",
+      "scrollTop": true,
+      "files": {
+        "rows": []
+      }
+    },
+    "9": {
+      "id": "9",
+      "type": "lab.html.Form",
+      "content": "<header><h3> <br><br>Thanks so much for participating!<br><br><h3></header>\n  <main>\n   <form id=\"form\">\n     <p>Do you have any questions, ideas or suggestions? Please feel free to share them with us, we're always happy to improve our studies: </p>\n     <br>\n      <input name=\"exp_feedback\" type=\"text\" style=\"width: 50em;\">\n   </form>\n\n</main>\n\n<!-- You can download the data by pressing \"d\" on your keyboard -->",
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "Continue",
+            "keypress",
+            "",
+            "d"
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "end of the study",
+      "_tab": "Content",
+      "scrollTop": true,
+      "files": {
+        "rows": []
+      }
+    },
+    "10": {
+      "id": "10",
+      "type": "lab.flow.Sequence",
+      "children": [
+        "12"
+      ],
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "training block",
+      "_collapsed": false,
+      "_tab": "Scripts",
+      "files": {
+        "rows": []
+      }
+    },
+    "12": {
+      "id": "12",
+      "type": "lab.canvas.Frame",
+      "context": "<main style=\"cursor: none\">\n<!-- Nested components use this canvas -->\n<canvas />\n</main >\n<footer style=\"background-color: grey;\">\n<p>Please count the flashes: B = 0 flashes, N = 1 flash, M = 2 flashes</p>\n</footer>",
+      "contextSelector": "canvas",
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "Frame",
+      "children": [
+        "13"
+      ],
+      "_collapsed": false,
+      "files": {
+        "rows": []
+      },
+      "_tab": "Scripts"
+    },
+    "13": {
+      "id": "13",
+      "type": "lab.flow.Loop",
+      "children": [
+        "14"
+      ],
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "templateParameters": {
+        "columns": [
+          {
+            "name": "SIFIlabel",
+            "type": "string"
+          },
+          {
+            "name": "SOA",
+            "type": "number"
+          },
+          {
+            "name": "v1",
+            "type": "string"
+          },
+          {
+            "name": "v2",
+            "type": "string"
+          },
+          {
+            "name": "a1",
+            "type": "number"
+          },
+          {
+            "name": "a2",
+            "type": "number"
+          },
+          {
+            "name": "fixation",
+            "type": "number"
+          },
+          {
+            "name": "ITI",
+            "type": "string"
+          }
+        ],
+        "rows": [
+          [
+            "A1V0",
+            "57",
+            "grey",
+            "grey",
+            "1",
+            "0",
+            "1200",
+            "1300"
+          ],
+          [
+            "A0V2",
+            "57",
+            "white",
+            "white",
+            "0",
+            "0",
+            "1100",
+            "1100"
+          ],
+          [
+            "A2V1late",
+            "180",
+            "white",
+            "grey",
+            "1",
+            "1",
+            "1000",
+            "1200"
+          ],
+          [
+            "A2V1",
+            "57",
+            "white",
+            "grey",
+            "1",
+            "1",
+            "1300",
+            "1000"
+          ],
+          [
+            "A1V1",
+            "57",
+            "white",
+            "grey",
+            "1",
+            "0",
+            "1400",
+            "1400"
+          ],
+          [
+            "A1V2",
+            "57",
+            "white",
+            "white",
+            "1",
+            "0",
+            "1200",
+            "1100"
+          ],
+          [
+            "A2V1",
+            "57",
+            "white",
+            "grey",
+            "1",
+            "1",
+            "1400",
+            "1200"
+          ],
+          [
+            "A2V2",
+            "57",
+            "white",
+            "white",
+            "1",
+            "1",
+            "1300",
+            "1400"
+          ],
+          [
+            "A2V0",
+            "57",
+            "grey",
+            "grey",
+            "1",
+            "1",
+            "1000",
+            "1300"
+          ],
+          [
+            "A0V1",
+            "57",
+            "white",
+            "grey",
+            "0",
+            "0",
+            "1100",
+            "1000"
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "Loop training conditions",
+      "_tab": "Content",
+      "_collapsed": false,
+      "files": {
+        "rows": []
+      },
+      "sample": {
+        "mode": "sequential"
+      }
+    },
+    "14": {
+      "id": "14",
+      "type": "lab.flow.Sequence",
+      "children": [
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20"
+      ],
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "Sequence",
+      "files": {
+        "rows": []
+      }
+    },
+    "15": {
+      "id": "15",
+      "type": "lab.canvas.Screen",
+      "content": [
+        {
+          "type": "i-text",
+          "version": "2.2.4",
+          "originX": "center",
+          "originY": "center",
+          "left": "0",
+          "top": -125,
+          "width": 56.4,
+          "height": 113,
+          "fill": "black",
+          "stroke": null,
+          "strokeWidth": 1,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeLineJoin": "round",
+          "strokeMiterLimit": 10,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "clipTo": null,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "transformMatrix": null,
+          "skewX": 0,
+          "skewY": 0,
+          "text": "+",
+          "fontSize": "100",
+          "fontWeight": "normal",
+          "fontFamily": "Times New Roman",
+          "fontStyle": "normal",
+          "lineHeight": 1.16,
+          "underline": false,
+          "overline": false,
+          "linethrough": false,
+          "textAlign": "center",
+          "textBackgroundColor": "",
+          "charSpacing": 0,
+          "id": "320",
+          "styles": {}
+        }
+      ],
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "viewport": [
+        800,
+        600
+      ],
+      "title": "Fixation",
+      "_tab": "Content",
+      "timeout": "${parameters.fixation}",
+      "files": {
+        "rows": []
+      }
+    },
+    "16": {
+      "id": "16",
+      "type": "lab.canvas.Screen",
+      "content": [
+        {
+          "type": "circle",
+          "version": "2.2.4",
+          "originX": "center",
+          "originY": "center",
+          "left": 0,
+          "top": "90.5",
+          "width": 55,
+          "height": 55,
+          "fill": "${ parameters.v1 }",
+          "stroke": "${parameters.v1}",
+          "strokeWidth": 1,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeLineJoin": "round",
+          "strokeMiterLimit": 10,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "clipTo": null,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "transformMatrix": null,
+          "skewX": 0,
+          "skewY": 0,
+          "radius": 27.5,
+          "startAngle": 0,
+          "endAngle": 6.283185307179586,
+          "id": "182"
+        },
+        {
+          "type": "i-text",
+          "version": "2.2.4",
+          "originX": "center",
+          "originY": "center",
+          "left": 0,
+          "top": -125,
+          "width": 56.4,
+          "height": 113,
+          "fill": "black",
+          "stroke": null,
+          "strokeWidth": 1,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeLineJoin": "round",
+          "strokeMiterLimit": 10,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "clipTo": null,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "transformMatrix": null,
+          "skewX": 0,
+          "skewY": 0,
+          "text": "+",
+          "fontSize": "100",
+          "fontWeight": "normal",
+          "fontFamily": "Times New Roman",
+          "fontStyle": "normal",
+          "lineHeight": 1.16,
+          "underline": false,
+          "overline": false,
+          "linethrough": false,
+          "textAlign": "center",
+          "textBackgroundColor": "",
+          "charSpacing": 0,
+          "id": "348",
+          "styles": {}
+        }
+      ],
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "prep",
+              "message": "before:prepare",
+              "code": "const sound = document.createElement('audio')\nsound.src = 'static/10ms1000Hz (1).mp3'\nsound.volume = this.aggregateParameters.a1\nthis.internals.sound = sound"
+            }
+          ],
+          [
+            {
+              "title": "play",
+              "message": "run",
+              "code": "this.internals.sound.play()"
+            }
+          ]
+        ]
+      },
+      "viewport": [
+        800,
+        600
+      ],
+      "title": "SIFI stimulus 1",
+      "_tab": "Scripts",
+      "timeout": "16",
+      "files": {
+        "rows": []
+      }
+    },
+    "17": {
+      "id": "17",
+      "type": "lab.canvas.Screen",
+      "content": [
+        {
+          "type": "i-text",
+          "version": "2.2.4",
+          "originX": "center",
+          "originY": "center",
+          "left": 0,
+          "top": -125,
+          "width": 56.4,
+          "height": 113,
+          "fill": "black",
+          "stroke": null,
+          "strokeWidth": 1,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeLineJoin": "round",
+          "strokeMiterLimit": 10,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "clipTo": null,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "transformMatrix": null,
+          "skewX": 0,
+          "skewY": 0,
+          "text": "+",
+          "fontSize": "100",
+          "fontWeight": "normal",
+          "fontFamily": "Times New Roman",
+          "fontStyle": "normal",
+          "lineHeight": 1.16,
+          "underline": false,
+          "overline": false,
+          "linethrough": false,
+          "textAlign": "center",
+          "textBackgroundColor": "",
+          "charSpacing": 0,
+          "id": "358",
+          "styles": {}
+        }
+      ],
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "viewport": [
+        800,
+        600
+      ],
+      "title": "SIFI SOA",
+      "_tab": "Content",
+      "timeout": "${parameters.SOA}",
+      "files": {
+        "rows": []
+      }
+    },
+    "18": {
+      "id": "18",
+      "type": "lab.canvas.Screen",
+      "content": [
+        {
+          "type": "i-text",
+          "version": "2.2.4",
+          "originX": "center",
+          "originY": "center",
+          "left": "0",
+          "top": "-125",
+          "width": 56.4,
+          "height": 113,
+          "fill": "black",
+          "stroke": null,
+          "strokeWidth": 1,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeLineJoin": "round",
+          "strokeMiterLimit": 10,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "clipTo": null,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "transformMatrix": null,
+          "skewX": 0,
+          "skewY": 0,
+          "text": "+",
+          "fontSize": "100",
+          "fontWeight": "normal",
+          "fontFamily": "Times New Roman",
+          "fontStyle": "normal",
+          "lineHeight": 1.16,
+          "underline": false,
+          "overline": false,
+          "linethrough": false,
+          "textAlign": "center",
+          "textBackgroundColor": "",
+          "charSpacing": 0,
+          "id": "368",
+          "styles": {}
+        },
+        {
+          "type": "circle",
+          "version": "2.2.4",
+          "originX": "center",
+          "originY": "center",
+          "left": 0,
+          "top": "90.5",
+          "width": "55",
+          "height": 55,
+          "fill": "${parameters.v2}",
+          "stroke": null,
+          "strokeWidth": 1,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeLineJoin": "round",
+          "strokeMiterLimit": 10,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "clipTo": null,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "transformMatrix": null,
+          "skewX": 0,
+          "skewY": 0,
+          "radius": 27.5,
+          "startAngle": 0,
+          "endAngle": 6.283185307179586,
+          "id": "369"
+        }
+      ],
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "prep",
+              "message": "before:prepare",
+              "code": "const sound = document.createElement('audio')\nsound.src = 'static/10ms1000Hz (1).mp3'\nsound.volume = this.aggregateParameters.a1\nthis.internals.sound = sound"
+            }
+          ],
+          [
+            {
+              "title": "play",
+              "message": "run",
+              "code": "this.internals.sound.play()"
+            }
+          ]
+        ]
+      },
+      "viewport": [
+        800,
+        600
+      ],
+      "title": "SIFI stimulus 2",
+      "_tab": "Behavior",
+      "timeout": "16",
+      "files": {
+        "rows": []
+      }
+    },
+    "19": {
+      "id": "19",
+      "type": "lab.canvas.Screen",
+      "content": [
+        {
+          "type": "i-text",
+          "version": "2.2.4",
+          "originX": "center",
+          "originY": "center",
+          "left": 0,
+          "top": -125,
+          "width": 44.38,
+          "height": 113,
+          "fill": "black",
+          "stroke": null,
+          "strokeWidth": 1,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeLineJoin": "round",
+          "strokeMiterLimit": 10,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "clipTo": null,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "transformMatrix": null,
+          "skewX": 0,
+          "skewY": 0,
+          "text": "?",
+          "fontSize": "100",
+          "fontWeight": "normal",
+          "fontFamily": "serif",
+          "fontStyle": "normal",
+          "lineHeight": 1.16,
+          "underline": false,
+          "overline": false,
+          "linethrough": false,
+          "textAlign": "center",
+          "textBackgroundColor": "",
+          "charSpacing": 0,
+          "id": "510",
+          "styles": {}
+        }
+      ],
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "0",
+            "keypress",
+            "",
+            "b"
+          ],
+          [
+            "1",
+            "keypress",
+            "",
+            "n"
+          ],
+          [
+            "2",
+            "keypress",
+            "",
+            "m"
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "viewport": [
+        800,
+        600
+      ],
+      "title": "SIFI response",
+      "_tab": "Content",
+      "timeout": "1700",
+      "files": {
+        "rows": []
+      }
+    },
+    "20": {
+      "id": "20",
+      "type": "lab.canvas.Screen",
+      "content": [
+        {
+          "type": "i-text",
+          "version": "2.2.4",
+          "originX": "center",
+          "originY": "center",
+          "left": 0,
+          "top": -125,
+          "width": 56.4,
+          "height": 113,
+          "fill": "black",
+          "stroke": null,
+          "strokeWidth": 1,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeLineJoin": "round",
+          "strokeMiterLimit": 10,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "clipTo": null,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "transformMatrix": null,
+          "skewX": 0,
+          "skewY": 0,
+          "text": "+",
+          "fontSize": "100",
+          "fontWeight": "normal",
+          "fontFamily": "Times New Roman",
+          "fontStyle": "normal",
+          "lineHeight": 1.16,
+          "underline": false,
+          "overline": false,
+          "linethrough": false,
+          "textAlign": "center",
+          "textBackgroundColor": "",
+          "charSpacing": 0,
+          "id": "778",
+          "styles": {}
+        }
+      ],
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "viewport": [
+        800,
+        600
+      ],
+      "title": "ITI",
+      "_tab": "Behavior",
+      "timeout": "${parameters.ITI}",
+      "files": {
+        "rows": []
+      }
+    },
+    "110": {
+      "id": "110",
+      "type": "lab.flow.Sequence",
+      "children": [
+        "111",
+        "112"
+      ],
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "main block",
+      "_collapsed": false,
+      "files": {
+        "rows": []
+      }
+    },
+    "111": {
+      "id": "111",
+      "type": "lab.html.Screen",
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "Continue",
+            "keypress",
+            "",
+            "Space"
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "main Instructions",
+      "content": "<header><h3>Main block 1 of 4 </h3></header>\n\n<main class=\"content-vertical-center content-horizontal-center\">\n  <div class=\"w-m text-justify\">\n\n<p>Now it’s getting serious! In the following main block, we'll show you a combination of beeps and flashes, just as we did in the training block. Please state again how many flashes you saw by pressing a key on your keyboard when you see the questionmark.</p> <p>Press the key <strong>B</strong> if you saw <strong>0 flashes</strong>, <strong>N</strong> if you saw <strong>1 flash</strong> and <strong>M</strong> if you saw <strong> 2 flashes</strong>.</p>\n<p>Please relax and try to keep your gaze fixed on the cross you'll see in the upper middle of the screen. </p>\n\n</main>\n<footer style=\"background-color: grey;\">\n<em>Are you ready? Please press the space bar to start the main block.</em>\n</footer>\n</div>",
+      "_tab": "Content",
+      "files": {
+        "rows": []
+      }
+    },
+    "112": {
+      "id": "112",
+      "type": "lab.canvas.Frame",
+      "context": "<main style=\"cursor: none\">\n<!-- Nested components use this canvas -->\n<canvas />\n</main >\n<footer style=\"background-color: grey;\">\n<p>Please count the flashes: B = 0 flashes, N = 1 flash, M = 2 flashes</p>\n</footer>\n\n\n\n",
+      "contextSelector": "canvas",
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "Frame",
+      "children": [
+        "113"
+      ],
+      "files": {
+        "rows": []
+      }
+    },
+    "113": {
+      "id": "113",
+      "type": "lab.flow.Loop",
+      "children": [
+        "114"
+      ],
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "templateParameters": {
+        "columns": [
+          {
+            "name": "SIFIlabel",
+            "type": "string"
+          },
+          {
+            "name": "SOA",
+            "type": "number"
+          },
+          {
+            "name": "v1",
+            "type": "string"
+          },
+          {
+            "name": "v2",
+            "type": "string"
+          },
+          {
+            "name": "a1",
+            "type": "number"
+          },
+          {
+            "name": "a2",
+            "type": "number"
+          },
+          {
+            "name": "fixation",
+            "type": "number"
+          },
+          {
+            "name": "ITI",
+            "type": "string"
+          }
+        ],
+        "rows": [
+          [
+            "A0V2",
+            "57",
+            "white",
+            "white",
+            "0",
+            "0",
+            "1000",
+            "1000"
+          ],
+          [
+            "A1V0",
+            "57",
+            "grey",
+            "grey",
+            "1",
+            "0",
+            "1200",
+            "1100"
+          ],
+          [
+            "A1V2",
+            "57",
+            "white",
+            "white",
+            "1",
+            "0",
+            "1000",
+            "1200"
+          ],
+          [
+            "A2V2",
+            "57",
+            "white",
+            "white",
+            "1",
+            "1",
+            "1200",
+            "1000"
+          ],
+          [
+            "A0V1",
+            "57",
+            "white",
+            "grey",
+            "0",
+            "0",
+            "1200",
+            "1000"
+          ],
+          [
+            "A0V1",
+            "57",
+            "white",
+            "grey",
+            "0",
+            "0",
+            "1100",
+            "1300"
+          ],
+          [
+            "A2V1late",
+            "180",
+            "white",
+            "grey",
+            "1",
+            "1",
+            "1000",
+            "1200"
+          ],
+          [
+            "A1V1",
+            "57",
+            "white",
+            "grey",
+            "1",
+            "0",
+            "1300",
+            "1000"
+          ],
+          [
+            "A2V0",
+            "57",
+            "grey",
+            "grey",
+            "1",
+            "1",
+            "1300",
+            "1400"
+          ],
+          [
+            "A2V1",
+            "57",
+            "white",
+            "grey",
+            "1",
+            "1",
+            "1100",
+            "1100"
+          ],
+          [
+            "A2V1",
+            "57",
+            "white",
+            "grey",
+            "1",
+            "1",
+            "1200",
+            "1400"
+          ],
+          [
+            "A1V1",
+            "57",
+            "white",
+            "grey",
+            "1",
+            "0",
+            "1000",
+            "1300"
+          ],
+          [
+            "A2V1late",
+            "180",
+            "white",
+            "grey",
+            "1",
+            "1",
+            "1400",
+            "1300"
+          ],
+          [
+            "A1V0",
+            "57",
+            "grey",
+            "grey",
+            "1",
+            "0",
+            "1200",
+            "1000"
+          ],
+          [
+            "A2V1",
+            "57",
+            "white",
+            "grey",
+            "1",
+            "1",
+            "1000",
+            "1200"
+          ],
+          [
+            "A2V2",
+            "57",
+            "white",
+            "white",
+            "1",
+            "1",
+            "1400",
+            "1100"
+          ],
+          [
+            "A2V0",
+            "57",
+            "white",
+            "grey",
+            "1",
+            "1",
+            "1200",
+            "1300"
+          ],
+          [
+            "A0V1",
+            "57",
+            "white",
+            "grey",
+            "0",
+            "0",
+            "1300",
+            "1400"
+          ],
+          [
+            "A1V2",
+            "57",
+            "white",
+            "white",
+            "1",
+            "0",
+            "1300",
+            "1300"
+          ],
+          [
+            "A2V0",
+            "57",
+            "grey",
+            "grey",
+            "1",
+            "1",
+            "1100",
+            "1200"
+          ],
+          [
+            "A2V1",
+            "57",
+            "white",
+            "grey",
+            "1",
+            "1",
+            "1400",
+            "1000"
+          ],
+          [
+            "A1V0",
+            "57",
+            "grey",
+            "grey",
+            "1",
+            "0",
+            "1200",
+            "1100"
+          ],
+          [
+            "A0V2",
+            "57",
+            "white",
+            "white",
+            "0",
+            "0",
+            "1200",
+            "1000"
+          ],
+          [
+            "A2V1",
+            "57",
+            "white",
+            "grey",
+            "1",
+            "1",
+            "1100",
+            "1400"
+          ],
+          [
+            "A2V1late",
+            "180",
+            "white",
+            "grey",
+            "1",
+            "1",
+            "1400",
+            "1400"
+          ],
+          [
+            "A2V1",
+            "57",
+            "white",
+            "grey",
+            "1",
+            "1",
+            "1000",
+            "1300"
+          ],
+          [
+            "A0V2",
+            "57",
+            "white",
+            "white",
+            "0",
+            "0",
+            "1400",
+            "1400"
+          ],
+          [
+            "A1V0",
+            "57",
+            "grey",
+            "grey",
+            "1",
+            "0",
+            "1300",
+            "1200"
+          ],
+          [
+            "A0V1",
+            "57",
+            "white",
+            "grey",
+            "0",
+            "0",
+            "1200",
+            "1100"
+          ],
+          [
+            "A1V1",
+            "57",
+            "white",
+            "grey",
+            "1",
+            "0",
+            "1300",
+            "1200"
+          ],
+          [
+            "A2V1",
+            "57",
+            "white",
+            "grey",
+            "1",
+            "1",
+            "1100",
+            "1300"
+          ],
+          [
+            "A2V2",
+            "57",
+            "white",
+            "white",
+            "1",
+            "1",
+            "1100",
+            "1400"
+          ],
+          [
+            "A0V2",
+            "57",
+            "white",
+            "white",
+            "0",
+            "0",
+            "1400",
+            "1200"
+          ],
+          [
+            "A1V1",
+            "57",
+            "white",
+            "grey",
+            "1",
+            "0",
+            "1200",
+            "1000"
+          ],
+          [
+            "A1V2",
+            "57",
+            "white",
+            "white",
+            "1",
+            "0",
+            "1400",
+            "1400"
+          ],
+          [
+            "A2V1",
+            "57",
+            "white",
+            "grey",
+            "1",
+            "1",
+            "1000",
+            "1200"
+          ],
+          [
+            "A2V0",
+            "57",
+            "grey",
+            "grey",
+            "1",
+            "1",
+            "1000",
+            "1300"
+          ],
+          [
+            "A2V2",
+            "57",
+            "white",
+            "white",
+            "1",
+            "1",
+            "1100",
+            "1200"
+          ],
+          [
+            "A1V2",
+            "57",
+            "white",
+            "white",
+            "1",
+            "0",
+            "1300",
+            "1100"
+          ],
+          [
+            "A2V1",
+            "57",
+            "white",
+            "grey",
+            "1",
+            "1",
+            "1100",
+            "1100"
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "Loop main conditions",
+      "_tab": "Content",
+      "_collapsed": false,
+      "files": {
+        "rows": []
+      },
+      "sample": {
+        "mode": "sequential"
+      }
+    },
+    "114": {
+      "id": "114",
+      "type": "lab.flow.Sequence",
+      "children": [
+        "123",
+        "118",
+        "119",
+        "120",
+        "121",
+        "122"
+      ],
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "Sequence",
+      "files": {
+        "rows": []
+      }
+    },
+    "118": {
+      "id": "118",
+      "type": "lab.canvas.Screen",
+      "content": [
+        {
+          "type": "circle",
+          "version": "2.2.4",
+          "originX": "center",
+          "originY": "center",
+          "left": 0,
+          "top": "90.5",
+          "width": 55,
+          "height": 55,
+          "fill": "${ parameters.v1 }",
+          "stroke": "${parameters.v1}",
+          "strokeWidth": 1,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeLineJoin": "round",
+          "strokeMiterLimit": 10,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "clipTo": null,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "transformMatrix": null,
+          "skewX": 0,
+          "skewY": 0,
+          "radius": 27.5,
+          "startAngle": 0,
+          "endAngle": 6.283185307179586,
+          "id": "182"
+        },
+        {
+          "type": "i-text",
+          "version": "2.2.4",
+          "originX": "center",
+          "originY": "center",
+          "left": 0,
+          "top": -125,
+          "width": 56.4,
+          "height": 113,
+          "fill": "black",
+          "stroke": null,
+          "strokeWidth": 1,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeLineJoin": "round",
+          "strokeMiterLimit": 10,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "clipTo": null,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "transformMatrix": null,
+          "skewX": 0,
+          "skewY": 0,
+          "text": "+",
+          "fontSize": "100",
+          "fontWeight": "normal",
+          "fontFamily": "Times New Roman",
+          "fontStyle": "normal",
+          "lineHeight": 1.16,
+          "underline": false,
+          "overline": false,
+          "linethrough": false,
+          "textAlign": "center",
+          "textBackgroundColor": "",
+          "charSpacing": 0,
+          "id": "348",
+          "styles": {}
+        }
+      ],
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "prep",
+              "message": "before:prepare",
+              "code": "const sound = document.createElement('audio')\nsound.src = 'static/10ms1000Hz (1).mp3'\nsound.volume = this.aggregateParameters.a1\nthis.internals.sound = sound"
+            }
+          ],
+          [
+            {
+              "title": "play",
+              "message": "run",
+              "code": "this.internals.sound.play()"
+            }
+          ]
+        ]
+      },
+      "viewport": [
+        800,
+        600
+      ],
+      "title": "SIFI stimulus 1",
+      "_tab": "Scripts",
+      "timeout": "16",
+      "files": {
+        "rows": []
+      }
+    },
+    "119": {
+      "id": "119",
+      "type": "lab.canvas.Screen",
+      "content": [
+        {
+          "type": "i-text",
+          "version": "2.2.4",
+          "originX": "center",
+          "originY": "center",
+          "left": 0,
+          "top": -125,
+          "width": 56.4,
+          "height": 113,
+          "fill": "black",
+          "stroke": null,
+          "strokeWidth": 1,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeLineJoin": "round",
+          "strokeMiterLimit": 10,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "clipTo": null,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "transformMatrix": null,
+          "skewX": 0,
+          "skewY": 0,
+          "text": "+",
+          "fontSize": "100",
+          "fontWeight": "normal",
+          "fontFamily": "Times New Roman",
+          "fontStyle": "normal",
+          "lineHeight": 1.16,
+          "underline": false,
+          "overline": false,
+          "linethrough": false,
+          "textAlign": "center",
+          "textBackgroundColor": "",
+          "charSpacing": 0,
+          "id": "358",
+          "styles": {}
+        }
+      ],
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "viewport": [
+        800,
+        600
+      ],
+      "title": "SIFI SOA",
+      "_tab": "Content",
+      "timeout": "${parameters.SOA}",
+      "files": {
+        "rows": []
+      }
+    },
+    "120": {
+      "id": "120",
+      "type": "lab.canvas.Screen",
+      "content": [
+        {
+          "type": "i-text",
+          "version": "2.2.4",
+          "originX": "center",
+          "originY": "center",
+          "left": "0",
+          "top": "-125",
+          "width": 56.4,
+          "height": 113,
+          "fill": "black",
+          "stroke": null,
+          "strokeWidth": 1,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeLineJoin": "round",
+          "strokeMiterLimit": 10,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "clipTo": null,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "transformMatrix": null,
+          "skewX": 0,
+          "skewY": 0,
+          "text": "+",
+          "fontSize": "100",
+          "fontWeight": "normal",
+          "fontFamily": "Times New Roman",
+          "fontStyle": "normal",
+          "lineHeight": 1.16,
+          "underline": false,
+          "overline": false,
+          "linethrough": false,
+          "textAlign": "center",
+          "textBackgroundColor": "",
+          "charSpacing": 0,
+          "id": "368",
+          "styles": {}
+        },
+        {
+          "type": "circle",
+          "version": "2.2.4",
+          "originX": "center",
+          "originY": "center",
+          "left": 0,
+          "top": "90.5",
+          "width": "55",
+          "height": 55,
+          "fill": "${parameters.v2}",
+          "stroke": null,
+          "strokeWidth": 1,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeLineJoin": "round",
+          "strokeMiterLimit": 10,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "clipTo": null,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "transformMatrix": null,
+          "skewX": 0,
+          "skewY": 0,
+          "radius": 27.5,
+          "startAngle": 0,
+          "endAngle": 6.283185307179586,
+          "id": "369"
+        }
+      ],
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "prep",
+              "message": "before:prepare",
+              "code": "const sound = document.createElement('audio')\nsound.src = 'static/10ms1000Hz (1).mp3'\nsound.volume = this.aggregateParameters.a1\nthis.internals.sound = sound"
+            }
+          ],
+          [
+            {
+              "title": "play",
+              "message": "run",
+              "code": "this.internals.sound.play()"
+            }
+          ]
+        ]
+      },
+      "viewport": [
+        800,
+        600
+      ],
+      "title": "SIFI stimulus 2",
+      "_tab": "Scripts",
+      "timeout": "16",
+      "files": {
+        "rows": []
+      }
+    },
+    "121": {
+      "id": "121",
+      "type": "lab.canvas.Screen",
+      "content": [
+        {
+          "type": "i-text",
+          "version": "2.2.4",
+          "originX": "center",
+          "originY": "center",
+          "left": 0,
+          "top": -125,
+          "width": 44.38,
+          "height": 113,
+          "fill": "black",
+          "stroke": null,
+          "strokeWidth": 1,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeLineJoin": "round",
+          "strokeMiterLimit": 10,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "clipTo": null,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "transformMatrix": null,
+          "skewX": 0,
+          "skewY": 0,
+          "text": "?",
+          "fontSize": "100",
+          "fontWeight": "normal",
+          "fontFamily": "serif",
+          "fontStyle": "normal",
+          "lineHeight": 1.16,
+          "underline": false,
+          "overline": false,
+          "linethrough": false,
+          "textAlign": "center",
+          "textBackgroundColor": "",
+          "charSpacing": 0,
+          "id": "510",
+          "styles": {}
+        }
+      ],
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "0",
+            "keypress",
+            "",
+            "b"
+          ],
+          [
+            "1",
+            "keypress",
+            "",
+            "n"
+          ],
+          [
+            "2",
+            "keypress",
+            "",
+            "m"
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "viewport": [
+        800,
+        600
+      ],
+      "title": "SIFI response",
+      "_tab": "Content",
+      "timeout": "1700",
+      "files": {
+        "rows": []
+      }
+    },
+    "122": {
+      "id": "122",
+      "type": "lab.canvas.Screen",
+      "content": [
+        {
+          "type": "i-text",
+          "version": "2.2.4",
+          "originX": "center",
+          "originY": "center",
+          "left": 0,
+          "top": -125,
+          "width": 56.4,
+          "height": 113,
+          "fill": "black",
+          "stroke": null,
+          "strokeWidth": 1,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeLineJoin": "round",
+          "strokeMiterLimit": 10,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "clipTo": null,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "transformMatrix": null,
+          "skewX": 0,
+          "skewY": 0,
+          "text": "+",
+          "fontSize": "100",
+          "fontWeight": "normal",
+          "fontFamily": "Times New Roman",
+          "fontStyle": "normal",
+          "lineHeight": 1.16,
+          "underline": false,
+          "overline": false,
+          "linethrough": false,
+          "textAlign": "center",
+          "textBackgroundColor": "",
+          "charSpacing": 0,
+          "id": "800",
+          "styles": {}
+        }
+      ],
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "viewport": [
+        800,
+        600
+      ],
+      "title": "ITI",
+      "_tab": "Behavior",
+      "timeout": "${parameters.ITI}",
+      "files": {
+        "rows": []
+      }
+    },
+    "123": {
+      "id": "123",
+      "type": "lab.canvas.Screen",
+      "content": [
+        {
+          "type": "i-text",
+          "version": "2.2.4",
+          "originX": "center",
+          "originY": "center",
+          "left": "0",
+          "top": -125,
+          "width": 56.4,
+          "height": 113,
+          "fill": "black",
+          "stroke": null,
+          "strokeWidth": 1,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeLineJoin": "round",
+          "strokeMiterLimit": 10,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "clipTo": null,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "transformMatrix": null,
+          "skewX": 0,
+          "skewY": 0,
+          "text": "+",
+          "fontSize": "100",
+          "fontWeight": "normal",
+          "fontFamily": "Times New Roman",
+          "fontStyle": "normal",
+          "lineHeight": 1.16,
+          "underline": false,
+          "overline": false,
+          "linethrough": false,
+          "textAlign": "center",
+          "textBackgroundColor": "",
+          "charSpacing": 0,
+          "id": "320",
+          "styles": {}
+        }
+      ],
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "viewport": [
+        800,
+        600
+      ],
+      "title": "Fixation",
+      "_tab": "Content",
+      "timeout": "${parameters.fixation}",
+      "files": {
+        "rows": []
+      }
+    },
+    "125": {
+      "id": "125",
+      "type": "lab.html.Form",
+      "content": " <style> body {background-color:grey} </style>\n\n<header><h3>Participant Demographics</h3></header>\n\n<main class=\"content-vertical-center content-horizontal-center\">\n  <div class=\"w-m text-justify\">\n<p>Now we'd like to ask you a few questions about yourself. Please keep in mind that your answers will be stored and processed in encrypted form so we cannot draw any conclusions about you personally. Please answer truthfully. Thank you!</p>\n  <form>\n    <table class=\"table-plain\">      \n      <tr>\n        <th style=\"text-align: right;\">\n          Which gender would you most likely identify with? \n        </th>\n        <td style=\"text-align: left;\">\n          <select name=\"id_gender\" required>\n            <option value=\"\" selected> ------ </option> \n            <option value=\"male\"> male </option>\n            <option value=\"female\"> female </option>\n            <option value=\"nonbinary\"> non-binary </option>\n            <option value=\"notindicated\"> no answer </option>\n          </select>\n        </td>\n      </tr>\n      \n      <tr>\n        <th style=\"text-align: right;\">\n          <label for=\"birthday\">Please tell us your birthday!</label>\n        </th>\n        <td style=\"text-align: left;\"> \n        <input id=\"birthday\" name=\"id_birth\" type=\"date\" required> \n        </td>\n      </tr>\n \n      <tr>\n        <th style=\"text-align: right;\">\n          Do you suffer from any neurological diseases? <br>(If you suffer from migraine but are not affected by it right now, please choose \"No\".)\n        </th>\n        <td style=\"text-align: left;\">\n         <select name=\"id_neuro\" required>\n            <option value=\"\" selected> ------ </option> \n            <option value=\"yes\"> Yes </option>\n            <option value=\"no\"> No </option>\n         </select>\n         </td>\n      </tr>\n    \n      <tr>\n        <th style=\"text-align: right;\">\n          Are you currently under the influence of psychoactive substances (drugs or alcohol) or medicaments?\n        </th>\n        <td style=\"text-align: left;\">\n         <select name=\"id_drugs\" required>\n            <option value=\"\" selected> ------ </option> \n            <option value=\"yes\"> Yes </option>\n            <option value=\"no\"> No </option>\n         </select>\n         </td>\n      </tr>\n\n     <tr>\n        <th style=\"text-align: right;\">\n          Do you have an impaired eyesight? <br>(If you wear glasses or contact lenses, please choose \"No\".) \n        </th>\n        <td style=\"text-align: left;\">\n          <select name=\"id_eyesight\" required>\n            <option value=\"\" selected> ------ </option> \n            <option value=\"no\"> No </option>\n            <option value=\"yes\"> Yes </option>\n          </select>\n        </td>\n      </tr>\n\n      <th>\n      </th>\n      <td>\n      </td>\n\n      <tr>\n        <th style=\"text-align: right;\">\n          Do you have an impaired or altered hearing (e.g. deafness or tinnitus)?<br>(If your impaired hearing is compensated by a hearing aid, please choose \"No\".) \n        </th>\n        <td style=\"text-align: left;\">\n          <select name=\"id_hearing\" required>\n            <option value=\"\" selected> ------ </option> \n            <option value=\"no\"> No </option>\n            <option value=\"yes\"> Yes </option>\n          </select>\n        </td>\n      </tr>\n    </table>\n<br>\n<p style=\"text-align:center;\">\n<button type=\"submit\">\n  Continue!\n</button>\n</p>\n</form>\n</div>\n</main>\n",
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "demographics",
+      "_tab": "Content",
+      "scrollTop": true,
+      "files": {
+        "rows": []
+      }
+    },
+    "126": {
+      "id": "126",
+      "type": "lab.html.Form",
+      "content": "<style> body {background-color:grey} </style>\n\n<header><h3>Declaration of consent</h3></header>\n\n<main class=\"content-vertical-center content-horizontal-center\">\n  <div class=\"w-m text-justify\">\n<p>I, </p>\n \n  <form id=\"form\">\n    <table class=\"table-plain\">\n      <tr>\n        <th style=\"text-align: right;\">\n          <label for=\"fname\">1st letter of your first name: </label>\n        </th>\n        <td style=\"text-align: left;\">\n          <input id=\"fname\" name=\"id_fname\" type=\"text\" required> \n        </td>\n      </tr>\n      <tr>\n        <th style=\"text-align: right;\">\n          <label for=\"lname\">1st letter of your last name: </label>\n        </th>\n        <td style=\"text-align: left;\">\n          <input id=\"lname\" name=\"id_lname\" type=\"text\" required> \n        </td>\n      </tr>\n\n    </table>\n  \n<br>   \n  \n<p>hereby declare that</p>\n\nProf. Dr. Julian Keil<br>\nBiologische Psychologie<br>\nOlshausenstraße 62 - R. 306<br>\n24118 Kiel<br>\n0431 / 880 - 4872<br>\nkeil@psychologie.uni-kiel.de<br>\n<br>\n<p>informed me by way of the Subject Information about the nature, the meaning, the significance, and the risks of the scientific study »Sound Induced Flash Illusion« which is conducted by the Department of Psychology at Kiel University (CAU).</p>\n<p>I understood the Subject Information.</p>\n\n<p>I am willing to participate in this scientific study.</p>\n\n<p>I am aware that I have the right to withdraw my consent at any time without giving reasons and without any adverse consequences for me. I am also aware that I have the right to disagree with the (further) processing of my data at any time.</p>\n\n<p><strong>Declaration of Consent Regarding Data Processing</p>\nI agree that the team of Prof. Dr. Julian Keil, Department of Psychology, Department of Biological Psychology at Kiel University (CAU), may process my personal data in the course of and for purposes of the aforementioned study. I also agree that the collected data are stored at the Department of Psychology, Department of Biological Psychology at Kiel University (CAU) in encrypted form, and that the anonymised results of the study may be published.</strong></p>\n\n  <br>\n<br>\n  </form>\n  </main>\n\n<footer style=\"background-color:grey;\">\nPlease klick this tick box to give your consent:<br><br>\n\n<input name=„id_consent“ type =\"checkbox\" required form=\"form\"> Yes, I give my consent.\n<br><br><br>\n<button type=\"submit\" form=\"form\">\n  Continue!\n</button>\n</footer>\n</div>\n",
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "consent",
+      "_tab": "Content",
+      "scrollTop": true,
+      "files": {
+        "rows": []
+      }
+    },
+    "127": {
+      "id": "127",
+      "type": "lab.html.Form",
+      "content": "<style> body {background-color:grey} </style>\n\n<header><p><h2>Subject Information</h2></p>\n<h3> Online Study \"Sound Induced Flash Illusion\"\n </h3>\n</header>\n<main class=\"content-vertical-center content-horizontal-center\">\n  <div class=\"w-m text-justify\">\n    \n<p>Dear participant,</p>\n\n<p>the Department of Biological Psychology at Kiel University (CAU) would like to thank you for your interest in our study „Sound Induced Flash Illusion“.<p>\n<p>The following text will inform you about the procedure and the characteristics of the study, the safeguarding of the medical confidentiality and your privacy, your rights regarding knowledge of the results of the study, and your right to withdraw your declaration of consent. Your participating in this study is voluntary.</p>\n\n<p>The lead investigator is Prof. Dr. Julian Keil, Department of Psychology at Kiel University (CAU).</p>\n\n\n<p> <h4>1. Purpose of the study </h4> </p>\n\n<p>The study is used for fundamental research regarding perception. Prof. Dr. Keil's team investigates multisensory perception, viz. the integration of visual and auditory information which results in our complex perception of our environment.</p> \n  \n<p>In the following experiment, we'll present to you a combination of simple symbols and sounds and ask you to react as fast as possible by pressing a key on your keyboard. In this study, we're testing the influence of the perception of a stimulus in one modality on the perception of a stimulus in another modality. This study doesn't test any clinical interventions.</p>\n\n<p> <h4>2. Procedure</h4></p>\n<p>If you decide to participate in this study, the procedures and your task will be explained to you. During the experiment, the aforementioned stimuli will be presented, and you will have to respond to them by pressing certain keys on the keyboard.</p>\n <p>There will be practice trials, so you can learn the task before the start of the actual experiment.</p>\n\n<p><h4>3. Behavior during the study</h4></p>\n\n<p>Please follow the instructions as strictly as possible. The experiment is about the perception of visual and auditory stimuli. There are no right or wrong answers.</p>\n\n<p><h4>4. Benefits</h4></p>\n\n<p>Participating in our study will not benefit you directly, but you will help us expand the scientific knowledge on the topic of multisensory integration. </p> <p>Students of psychology at Kiel University (CAU) can get course credit for the participation in the study.</p>\n\n<p><h4>5. Risks</h4></p>\n</p>Participating in our study is not associated with any foreseeable risks.</p>\n\n<p><h4>6. Privacy</h4></p>\n<p>If you are willing to participate in our study, you give the lead investigator and his team permission to collect and analyze your personal data. The collection and analysis of your data will take place at the Department of Psychology at Kiel University (CAU). Both will be contributed to by the lead investigator and his team. Personal data can be your birthday, your gender, information regarding your physical and mental health or other information you are asked about during the study. The lead investigator and his team will use these data for purposes of managing and carrying out the study and for purposes of research and statistical analysis.</p>\n<p>All data will be processed and stored in encrypted form. Therefore, no collected data (e.g. the answers to the questions on the computer) can be connected to you. As per the legal retention period, all collected data will be stored on a password encrypted computer for a maximum of ten\nyears and will be destroyed afterwards. You may disagree with the further processing of your data and request their complete erasure at any time.\n</p>\n<p>You are entitled to disclosure of all your personal data that are available to the investigators. You are also entitled to the correction of inaccurate personal data. In this case, please contact the lead investigator directly. You will find his address and phone number further on in this text.</p>\n<p>Please be aware that the results of this study may be published in a scientific journal. Your identity will remain anonymous.</p>\n\n<p><h4>7. Right to question / Disclosure requirement</h4></p>\n<p>You are entitled to ask the investigators any questions regarding the study at any time. In this case, please contact the lead investigator or his team: </p>\n\nProf. Dr. Julian Keil <br>\nBiologische Psychologie<br>\nOlshausenstraße 62 - R. 306<br>\n24118 Kiel<br>\n<br>\n0431 / 880 - 4872<br>\nkeil@psychologie.uni-kiel.de<br>\n\n<p> <h4>8. Voluntariness of participation</h4></p>\n<p>Your participation is voluntary. You can only participate in this study if you consent. You are entitled to withdraw your consent to participating in the study at any time informally and without giving reasons. There will be no adverse consequences for you. The same applies to the discontinuation of participation, the withdrawal of your declaration of consent, and your disagreeing with the (further) processing of your data.<p>\n\n<p><h4>9. Costs</h4></p>\n<p>Participation in the study is not associated with any costs for you.</p>\n<br>\n</div>\n</main>\n\n<footer style=\"background-color:grey;\"> \n  <em>Continue by pressing Space on your keyboard</em>\n</footer>\n\n",
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "Continue",
+            "keypress",
+            "",
+            "Space"
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "info",
+      "_tab": "Content",
+      "scrollTop": true,
+      "files": {
+        "rows": []
+      }
+    },
+    "128": {
+      "id": "128",
+      "type": "lab.html.Form",
+      "content": "<header> <h2> Thank you!</h2></header>\n\n<main>\n<p> Before we start, we'd like to ask you to generate an individual participant's code. Please generate your individual code by following the instructions:</p> \n<div class=\"alert\">\n\n <p> 1st letter: the last letter of your last name. (e.g. S as in \"Smith\")</p>\n <p> 2nd letter: the first two letters of your place of birth (e.g. KI as in \"Kiel\")</p>\n <p> 3rd letter: The last two numbers of your year of birth. (e.g. 96 as in \"1996\") </p>\n<p>(The example code would be in this case: SKI96)</p> </div>\n\n<br>\n<div class=\"alert\"> Your code:<br>\n<form>\n<input name=\"id_participant\" type=\"text\" style=\"width: 50em;\" required>\n<br>\n<button type=\"submit\">\n  Continue!\n</button>\n</form>\n</main>\n</div>",
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "participant's ID",
+      "_tab": "Content",
+      "scrollTop": true,
+      "files": {
+        "rows": []
+      }
+    },
+    "129": {
+      "id": "129",
+      "type": "lab.html.Screen",
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "Continue",
+            "keypress",
+            "",
+            "Space"
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "general instructions",
+      "_tab": "Content",
+      "content": "<header><h3>Welcome to the experiment! </h3> </header>\n\n<main class=\"content-vertical-center content-horizontal-center\">\n  <div class=\"w-m text-justify\">\n\n<p>The following experiment consists of several blocks, in which you'll be presented different combinations of sounds (beeps) and white circles (flashes). </p><p>Please indicate after each stimulus if you saw one, two or three flash(es) by pressing a key on your keyboard when you see a questionmark. During the experiment, please try to keep your gaze fixed on the cross you'll see in the upper middle of the screen.</p>\n  \n<p>Please press <strong>B</strong> if you saw <strong>0 flashes</strong>, <strong>N</strong> if you saw <strong>1 flash</strong> and <strong>M</strong> if you saw <strong>2 flashes</strong>. <p>\n\n<p>Before the experiment begins, you'll get the chance to practice the task in a short training block. After that, the main blocks start. You can take a break between the blocks if you want to, but please be aware that you can't take a break during a block. Each main block is about 5 minutes long. </p>\n\n</main>\n\n<footer style=\"background-color:grey;\">\n   <p><em>The training block starts as soon as you press the space bar.</p> <p> Have fun!</em></p>\n </footer>",
+      "files": {
+        "rows": []
+      }
+    },
+    "root": {
+      "id": "root",
+      "title": "root",
+      "type": "lab.flow.Sequence",
+      "children": [
+        "127",
+        "126",
+        "128",
+        "125",
+        "2",
+        "129",
+        "10",
+        "7",
+        "110",
+        "8",
+        "9"
+      ],
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "plugins": [
+        {
+          "type": "lab.plugins.Metadata"
+        }
+      ],
+      "metadata": {
+        "title": "Sound Induced Flash Illusion + n-back ",
+        "description": "",
+        "repository": "",
+        "contributors": "Julian Keil\nMerle Schuckart [schuckart@psychologie.uni-kiel.de]\nFelix Henninger\n"
+      },
+      "files": {
+        "rows": []
+      }
+    }
+  },
+  "version": [
+    19,
+    1,
+    1
+  ],
+  "files": {
+    "files": {
+      "index.html": {
+        "content": "data:text/html,%3C!doctype%20html%3E%0A%3Chtml%3E%0A%3Chead%3E%0A%20%20%3Cmeta%20charset%3D%22utf-8%22%3E%0A%20%20%3Ctitle%3EExperiment%3C%2Ftitle%3E%0A%20%20%3C!--%20lab.js%20library%20and%20experiment%20code%20--%3E%0A%20%20%24%7B%20header%20%7D%0A%3C%2Fhead%3E%0A%20%3Cbody%20style%3D%22background-color%3Agrey%3B%22%3E%0A%20%20%3C!--%20If%20you'd%20rather%20have%20a%20container%20with%20a%20fixed%20width%0A%20%20%20%20%20%20%20and%20variable%20height%2C%20try%20removing%20the%20fullscreen%20class%20below%20--%3E%0A%20%20%3Cdiv%20class%3D%22container%20fullscreen%22%20data-labjs-section%3D%22main%22%3E%0A%20%20%20%20%3Cmain%20class%3D%22content-vertical-center%20content-horizontal-center%22%3E%0A%20%20%20%20%20%20%3Cdiv%3E%0A%20%20%20%20%20%20%20%20%3Ch2%3ELoading%20Experiment%3C%2Fh2%3E%0A%20%20%20%20%20%20%20%20%3Cp%3EThe%20experiment%20is%20loading%20and%20should%20start%20in%20a%20few%20seconds%3C%2Fp%3E%0A%20%20%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3C%2Fmain%3E%0A%20%20%3C%2Fdiv%3E%0A%3C%2Fbody%3E%0A%3C%2Fhtml%3E%0A",
+        "source": "library"
+      },
+      "style.css": {
+        "content": "data:text/css,%2F*%20Please%20define%20your%20custom%20styles%20here%20*%2F",
+        "source": "library"
+      },
+      "static/10ms1000Hz (1).mp3": {
+        "content": "data:audio/mp3;base64,SUQzAwAAAAAAFlRQRTEAAAAMAAAASnVsaWFuIEtlaWz/+5DEAAAAAAAAAAAAAAAAAAAAAABJbmZvAAAADwAAAAIAAATkAICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgID//////////////////////////////////////////////////////////////////wAAADlMQU1FMy45OXIBzQAAAAAAAAAAFIAkBQdCAACAAAAE5JzbHI0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/+5DEAAAPxGM4dbyAE4cf5d89sAAAAluXOVu2sOhLLll3zBR0zlFNwZjUi4QEZqLicTKnLx5wLWaaUhUEPH0/9zrfNMkDDoprHa/D8spIxDD+P4/kOSynt5555516ekpKSwCAIAmD4Pg+fwQBAEwffLggCAY+XDGCAJg+D+oEAQDH3cuD4Pn+UOfBAEPB8/B9/xAAACCQmlEEAAAFwDTBmCZEQDxgsBAA0C4wXQRDB2BPMTgZswaACDGyYWMOYoszA13D4qp8MpEjIwo8DzHzBLNqFeY0JyjDR0wzE2MvWzTz816TMEOgcZmFjxi4AAj8w4KMMBg5PMHCBAJkAGqZYFaqkFLLOjKBdTFbBaJwWuwQ+tIWvaffcidZEmFL4JTFhrUaryq/L34lEsfvq/HdZU4atzzSnspltWzNfjK5/CksQYwFpr7XJ5pNLh2tTdy3S6/88///ptzVW5ayq0vqJSM4X+Ip23//Fn2L/+j/02gH91PUAAJzBAzMhDkwQIjNqmNmtQ16eCRMnHL+em0JuM0GYmycEgJtxSmXAWYfIxn/+5LEFgPVvKMAXc0AAAAANIAAAARUoGPREEAcxaA17o3bIIbGGSm4gm+bmmKhwV4QYBMQLMUFLow4pkhKRWa7SOEzprz9W4ZdmNWvxpaWlpcd0sppbOpVDUPWa0ajVN2lhmHbVWlpbP5U1MEgaDuDR4qCpUFXA0eER4qCsShosDMRB31u1A0oGjxU7/8FQVgqdLHiwdgrTEFNRTMuOTkuNVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV",
+        "source": "embedded-global",
+        "checkSum": "2b026a99d6553ec843090820ac92886103070076b993d86fe32e3a6fcc497035"
+      }
+    },
+    "bundledFiles": {
+      "lib/lab.js": {
+        "type": "application/javascript"
+      },
+      "lib/lab.js.map": {
+        "type": "text/plain"
+      },
+      "lib/lab.fallback.js": {
+        "type": "application/javascript"
+      },
+      "lib/lab.legacy.js": {
+        "type": "application/javascript"
+      },
+      "lib/lab.legacy.js.map": {
+        "type": "text/plain"
+      },
+      "lib/lab.css": {
+        "type": "text/css"
+      },
+      "lib/loading.svg": {
+        "type": "image/svg+xml"
+      }
+    }
+  }
+}
